@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codlexa</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Hero video background -->
+  <div id="hero-container">
+    <img src="assets/hero1.png" id="hero-image" />
+  </div>
+
+  <!-- Main WebGL container -->
+  <div id="webgl-container"></div>
+
+  <!-- UI for particle shapes -->
+  <div id="ui">
+    <h2>Interactive Particles</h2>
+    <p>Current Shape: <strong id="shape-name">Galaxy</strong></p>
+  </div>
+
+  <!-- Webcam feed hidden -->
+  <video id="webcam" autoplay playsinline></video>
+
+  <!-- JS -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>
